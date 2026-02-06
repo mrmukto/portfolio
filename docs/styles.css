@@ -581,6 +581,13 @@ code{
   .grid2{ grid-template-columns: 1fr; }
   .contactGrid{ grid-template-columns: 1fr; }
   .floaters{ display:none; }
+  .hero__meta{
+    align-items:flex-start;
+    gap:12px;
+  }
+  .avatar{
+    margin-top:4px;
+  }
 }
 
 @media (max-width: 740px){
