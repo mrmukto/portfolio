@@ -4,18 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light" />
-    <meta
-      name="description"
-      content="Mamunur Rashid Mukto — Android Developer. Kotlin/Java, Jetpack Compose, MVVM, NFC, realtime systems."
-    />
+    <meta name="description" content="Mamunur Rashid Mukto — Android Developer. Kotlin/Java, Jetpack Compose, MVVM, NFC, realtime systems." />
     <title>Mamunur Rashid Mukto — Android Developer</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet" />
     <link rel="icon" href="./assets/profile.png" type="image/png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -40,18 +33,18 @@
           <span class="brand__mark">MRM</span>
           <span class="brand__name">Mamunur Rashid Mukto</span>
         </a>
-        <nav class="nav">
-          <a class="nav__link" href="#experience">Experience</a>
-          <a class="nav__link" href="#projects">Projects</a>
-          <a class="nav__link" href="#education">Education</a>
-          <a class="nav__link" href="#contact">Contact</a>
+        <nav class="nav" id="mainNav">
+          <a class="nav__link" href="#skills" data-section="skills">Skills</a>
+          <a class="nav__link" href="#experience" data-section="experience">Experience</a>
+          <a class="nav__link" href="#projects" data-section="projects">Projects</a>
+          <a class="nav__link" href="#education" data-section="education">Education</a>
+          <a class="nav__link" href="#contact" data-section="contact">Contact</a>
         </nav>
-        <button class="navToggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navDrawer">
-          Menu
-        </button>
+        <button class="navToggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navDrawer">Menu</button>
       </div>
       <div class="drawer" id="navDrawer" hidden>
         <div class="container drawer__inner">
+          <a class="drawer__link" href="#skills">Skills</a>
           <a class="drawer__link" href="#experience">Experience</a>
           <a class="drawer__link" href="#projects">Projects</a>
           <a class="drawer__link" href="#education">Education</a>
@@ -61,26 +54,22 @@
     </header>
 
     <main id="top" class="container">
+
+      <!-- ── Hero ── -->
       <section class="hero" aria-label="Hero">
         <div class="hero__card card card--hero card--neon reveal">
           <div class="hero__meta">
             <div class="avatar" role="img" aria-label="Profile photo">
-              <img
-                src="./assets/profile.png"
-                alt="Mamunur Rashid Mukto"
-                onerror="this.closest('.avatar').classList.add('avatar--fallback'); this.remove();"
-              />
-              <div class="avatar__fallback">
-                <span>M</span>
-              </div>
+              <img src="./assets/profile.png" alt="Mamunur Rashid Mukto" onerror="this.closest('.avatar').classList.add('avatar--fallback'); this.remove();" />
+              <div class="avatar__fallback"><span>M</span></div>
             </div>
-            <div>
+            <div class="hero__info">
               <h1 class="h1 h1--glow">Mamunur Rashid Mukto</h1>
-              <p class="subtitle subtitle--glow">Android Developer • Kotlin/Java • Jetpack Compose</p>
+              <p class="subtitle subtitle--glow">Android Developer · Kotlin/Java · Jetpack Compose</p>
               <div class="badges">
                 <span class="badge">MVVM</span>
                 <span class="badge">NFC (FeliCa)</span>
-                <span class="badge">Realtime (MQTT/WebSocket)</span>
+                <span class="badge">Realtime (MQTT/WS)</span>
                 <span class="badge">FCM</span>
               </div>
             </div>
@@ -88,18 +77,43 @@
 
           <p class="lead lead--neon">
             Android developer with <strong>3+ years</strong> professional experience building and shipping production apps.
-            Strong in performance, realtime systems, and fintech/IoT integrations. Actively practicing Flutter, KMP, and Compose Multiplatform (CMP).
+            Strong in performance, realtime systems, and fintech/IoT integrations. Actively practising Flutter, KMP, and Compose Multiplatform.
           </p>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__n">3+</span>
+              <span class="stat__l">Years Exp.</span>
+            </div>
+            <div class="stat__sep"></div>
+            <div class="stat">
+              <span class="stat__n">6+</span>
+              <span class="stat__l">Projects</span>
+            </div>
+            <div class="stat__sep"></div>
+            <div class="stat">
+              <span class="stat__n">10+</span>
+              <span class="stat__l">Clients</span>
+            </div>
+          </div>
 
           <div class="hero__cta">
             <a class="btn btn--primary" href="#contact">Contact</a>
+            <a class="btn btn--ghost" href="./assets/Mamunur_Rashid_Mukto_CV.pdf" download>↓ Download CV</a>
           </div>
 
           <div class="hero__contact" id="contact">
             <div class="contactGrid">
-              <a class="contact" href="mailto:mrmukto12@gmail.com">
+              <a class="contact contact--copyable" href="mailto:mrmukto12@gmail.com" data-copy="mrmukto12@gmail.com">
                 <span class="contact__k">Email</span>
-                <span class="contact__v">mrmukto12@gmail.com</span>
+                <div class="contact__row">
+                  <span class="contact__v">mrmukto12@gmail.com</span>
+                  <button class="copyBtn" type="button" aria-label="Copy email" title="Copy to clipboard">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span class="copyBtn__label">Copy</span>
+                    <span class="copyBtn__done">Copied!</span>
+                  </button>
+                </div>
               </a>
               <a class="contact" href="tel:+8801717383336">
                 <span class="contact__k">Phone</span>
@@ -135,7 +149,6 @@
               <span class="chip chip--neon">Hilt / Dagger</span>
             </div>
           </section>
-
           <section class="card reveal card--neon">
             <h2 class="h2 h2--glow">Languages</h2>
             <div class="kv">
@@ -146,6 +159,49 @@
         </div>
       </section>
 
+      <!-- ── Skills & Tools ── -->
+      <section id="skills" class="section">
+        <div class="section__head reveal">
+          <h2 class="h2 h2--big">Skills &amp; Tools</h2>
+          <p class="muted">Areas of expertise and development toolchain.</p>
+        </div>
+        <div class="skills__grid">
+          <article class="card reveal">
+            <h3 class="h3">Areas of Strength</h3>
+            <ul class="strengthList">
+              <li>Android Application Development</li>
+              <li>Data Storage and Management</li>
+              <li>Asynchronous Programming &amp; Concurrency</li>
+              <li>Real-Time Communication</li>
+              <li>Version Control</li>
+              <li>Background Processing &amp; Task Scheduling</li>
+              <li>Dependency Injection</li>
+              <li>Bluetooth &amp; Connectivity Management</li>
+              <li>User Interface Navigation</li>
+              <li>Data Visualization</li>
+              <li>Push Notifications &amp; Real-Time Updates</li>
+              <li>NFC (FeliCa) Integration</li>
+              <li>Play Store Deployment &amp; App Distribution</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3 class="h3">Framework &amp; Tools</h3>
+            <div class="chipGrid">
+              <span class="chip chip--tool">Android</span>
+              <span class="chip chip--tool">Android Studio</span>
+              <span class="chip chip--tool">ADB</span>
+              <span class="chip chip--tool">AVD</span>
+              <span class="chip chip--tool">Git</span>
+              <span class="chip chip--tool">GitHub</span>
+              <span class="chip chip--tool">Postman</span>
+              <span class="chip chip--tool">Adobe XD</span>
+              <span class="chip chip--tool">Figma</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── Experience ── -->
       <section id="experience" class="section">
         <div class="section__head reveal">
           <h2 class="h2 h2--big">Experience</h2>
@@ -157,9 +213,7 @@
               <h3 class="h3">Software Engineer (Android)</h3>
               <div class="pill">Sep 2022 — Present</div>
             </div>
-            <p class="muted">
-              Datasoft Manufacturing &amp; Assembly Inc. Ltd. (DMA), Block #D, Level-7, House #84, 1 Rd 10, Niketan, Gulshan, Dhaka 1212
-            </p>
+            <p class="muted">Datasoft Manufacturing &amp; Assembly Inc. Ltd. (DMA) · Gulshan, Dhaka</p>
             <ul class="list">
               <li>Design, develop, and maintain Android applications with a focus on user experience, functionality, and performance.</li>
               <li>Collaborate with team leaders and project managers to assess and understand client requirements.</li>
@@ -174,125 +228,174 @@
         </div>
       </section>
 
+      <!-- ── Projects ── -->
       <section id="projects" class="section">
         <div class="section__head reveal">
           <h2 class="h2 h2--big">Professional Projects</h2>
-          <p class="muted">A selection of projects with impact and the tech behind them.</p>
+          <p class="muted">A selection of projects with real-world impact.</p>
         </div>
 
-        <div class="cards">
-          <article class="card reveal">
+        <div class="filterBar reveal" role="group" aria-label="Filter projects by technology">
+          <button class="filterBtn filterBtn--active" data-filter="all">All</button>
+          <button class="filterBtn" data-filter="kotlin">Kotlin</button>
+          <button class="filterBtn" data-filter="nfc">NFC / Fintech</button>
+          <button class="filterBtn" data-filter="flutter">Flutter</button>
+          <button class="filterBtn" data-filter="iot">IoT / MQTT</button>
+        </div>
+
+        <div class="cards" id="projectCards">
+
+          <article class="card card--proj reveal" data-tags="kotlin android mvvm firebase fcm rest-api">
+            <div class="card__accent" style="--proj-color:#7c3aed"></div>
             <div class="card__head">
               <img class="card__logo" src="./assets/security.png" alt="Security System logo" />
-              <h3 class="h3">Security System (Surveillance &amp; Security Management)</h3>
+              <div>
+                <span class="card__cat">Surveillance &amp; Security</span>
+                <h3 class="h3">Security System</h3>
+              </div>
             </div>
-            <p class="muted">
-              Mobile and web-friendly security platform designed to supplement night guards for businesses and homeowners.
-            </p>
+            <p class="card__desc">Mobile and web-friendly platform designed to supplement night guards for businesses and homeowners.</p>
             <ul class="list">
               <li>Real-time monitoring and incident reporting.</li>
               <li>Emergency alarm control with two-way GSM communication.</li>
               <li>Scheduled arming/disarming of devices and map-based status updates.</li>
-              <li>Wireless GSM with lithium-ion battery backup.</li>
             </ul>
-            <p class="tagline">
-              MVVM • Kotlin • Retrofit2 (REST API) • FCM • Services/Broadcast Receivers • Picasso • RecyclerView • CardView • Android Studio • XML • Firebase • SharedPreferences
-            </p>
-            <p class="muted">Clients: ACI (Shwapno), Agora, RFL.</p>
+            <div class="techTags">
+              <span class="techTag">MVVM</span>
+              <span class="techTag">Kotlin</span>
+              <span class="techTag">Retrofit2</span>
+              <span class="techTag">FCM</span>
+              <span class="techTag">Firebase</span>
+              <span class="techTag">XML</span>
+            </div>
+            <p class="card__clients">Clients: ACI (Shwapno), Agora, RFL</p>
           </article>
 
-          <article class="card reveal">
+          <article class="card card--proj reveal" data-tags="kotlin java nfc fintech android payment">
+            <div class="card__accent" style="--proj-color:#ec4899"></div>
             <div class="card__head">
               <img class="card__logo" src="./assets/cashless.png" alt="Cashless Payment System logo" />
-              <h3 class="h3">Cashless Payment System (Smart Cards + POS)</h3>
+              <div>
+                <span class="card__cat">Fintech / NFC</span>
+                <h3 class="h3">Cashless Payment System</h3>
+              </div>
             </div>
-            <p class="muted">
-              Seamless cashless payment solution with smart cards and POS terminals for transport, tolls, petrol stations, parking, and retail stores.
-            </p>
+            <p class="card__desc">Seamless cashless payment with smart cards and POS for transport, tolls, petrol stations, parking, and retail.</p>
             <ul class="list">
-              <li>Users apply for cards via portal or mobile app; links to bank accounts, cards, or MFS services.</li>
+              <li>Links card to bank accounts, cards, or MFS for instant transactions.</li>
               <li>Built loyalty and discount features using NFC smart cards.</li>
             </ul>
-            <p class="tagline">
-              MVVM • Java • Kotlin • NFC • Location Services • FCM • Service • Broadcast Receiver • REST API • Payment Gateway (bKash, SSL Wireless, amarPay)
-            </p>
-            <p class="muted">Clients: Crimson Cup, JCX (Brew Splash), OtoMatic.</p>
+            <div class="techTags">
+              <span class="techTag techTag--nfc">NFC</span>
+              <span class="techTag">Kotlin</span>
+              <span class="techTag">Java</span>
+              <span class="techTag">MVVM</span>
+              <span class="techTag">bKash / SSL Wireless</span>
+              <span class="techTag">FCM</span>
+            </div>
+            <p class="card__clients">Clients: Crimson Cup, JCX (Brew Splash), OtoMatic</p>
           </article>
 
-          <article class="card reveal">
+          <article class="card card--proj reveal" data-tags="kotlin nfc fintech android hilt">
+            <div class="card__accent" style="--proj-color:#22d3ee"></div>
             <div class="card__head">
               <img class="card__logo" src="./assets/metro.png" alt="Metro Rail AFC logo" />
-              <h3 class="h3">Metro Rail Automatic Fare Collection &amp; Refill System</h3>
+              <div>
+                <span class="card__cat">Fintech / NFC</span>
+                <h3 class="h3">Metro Rail AFC &amp; Refill System</h3>
+              </div>
             </div>
-            <p class="muted">
-              NFC-based smart card recharge and balance update system for metro passengers.
-            </p>
+            <p class="card__desc">NFC-based smart card recharge and balance update system for metro passengers.</p>
             <ul class="list">
-              <li>Users recharge via mobile app or website; recharge info stored on a Top-up Server.</li>
               <li>AVM validates data, updates card balance, and displays the new balance.</li>
-              <li>Implemented fintech-grade security: secure handling, encryption, and fraud prevention.</li>
-              <li>Used DI for scalable, testable architecture.</li>
+              <li>Fintech-grade security: secure handling, encryption, fraud prevention.</li>
+              <li>Used Hilt DI for scalable, testable architecture.</li>
             </ul>
-            <p class="tagline">
-              NFC (FeliCa) • MVVM • Retrofit2 (REST API) • DI (Hilt) • Secure Payment Gateway (SSL Wireless) • FCM • Services/Broadcast Receivers • CMake • Android Studio (Kotlin + XML)
-            </p>
-            <p class="muted">Clients/partners: DTCA, DMTCL, Boston Consulting Group.</p>
+            <div class="techTags">
+              <span class="techTag techTag--nfc">NFC (FeliCa)</span>
+              <span class="techTag">MVVM</span>
+              <span class="techTag">Hilt</span>
+              <span class="techTag">Retrofit2</span>
+              <span class="techTag">SSL Wireless</span>
+              <span class="techTag">CMake</span>
+            </div>
+            <p class="card__clients">Clients: DTCA, DMTCL, Boston Consulting Group</p>
           </article>
 
-          <article class="card reveal">
+          <article class="card card--proj reveal" data-tags="flutter iot getx dio">
+            <div class="card__accent" style="--proj-color:#10b981"></div>
             <div class="card__head">
               <img class="card__logo" src="./assets/Goti_SVG.svg" alt="Goti logo" />
-              <h3 class="h3">Goti — Smart Battery Monitoring &amp; Fleet Insights</h3>
+              <div>
+                <span class="card__cat">Flutter / IoT</span>
+                <h3 class="h3">Goti — Battery Monitoring &amp; Fleet</h3>
+              </div>
             </div>
-            <p class="muted">
-              Real-time battery health, SOC/SOH tracking, payments, and notifications for Rahimafrooz (Bangladesh) Ltd.’s
-              connected vehicles and BMS ecosystem.
-            </p>
+            <p class="card__desc">Real-time battery health, SOC/SOH tracking, payments, and notifications for Rahimafrooz's connected vehicle ecosystem.</p>
             <ul class="list">
-              <li>Built dashboards for live metrics, activity alerts, asset tracking, and subscription management.</li>
+              <li>Dashboards for live metrics, activity alerts, asset tracking, and subscription management.</li>
             </ul>
-            <p class="tagline">Flutter • GetX • Dio (REST) • WebView • Maps • GetStorage</p>
-            <p class="muted">Client: Rahimafrooz (Bangladesh) Ltd.</p>
+            <div class="techTags">
+              <span class="techTag techTag--flutter">Flutter</span>
+              <span class="techTag">GetX</span>
+              <span class="techTag">Dio (REST)</span>
+              <span class="techTag">WebView</span>
+              <span class="techTag">Maps</span>
+            </div>
+            <p class="card__clients">Client: Rahimafrooz (Bangladesh) Ltd.</p>
           </article>
 
-          <article class="card reveal">
+          <article class="card card--proj reveal" data-tags="kotlin android iot mqtt firebase">
+            <div class="card__accent" style="--proj-color:#f59e0b"></div>
             <div class="card__head">
               <img class="card__logo" src="./assets/loan.png" alt="Loan & Asset Tracking logo" />
-              <h3 class="h3">Loan Collection &amp; Asset Tracking Systems</h3>
+              <div>
+                <span class="card__cat">Tracking / MQTT</span>
+                <h3 class="h3">Loan Collection &amp; Asset Tracking</h3>
+              </div>
             </div>
-            <p class="muted">
-              Loan collection and asset tracking platforms with real-time monitoring and admin visibility.
-            </p>
+            <p class="card__desc">Dual-platform for loan collection and asset tracking with real-time MQTT monitoring and admin visibility.</p>
             <ul class="list">
-              <li>Territory officers collect loans; admins receive instant notifications of collections and bank deposits.</li>
-              <li>Mapped officer routes with Google Maps and tracked activities from the admin view.</li>
-              <li>Used MQTT broker for real-time location monitoring of field officers.</li>
+              <li>Mapped officer routes with Google Maps and real-time MQTT location tracking.</li>
               <li>Admins assign tasks, monitor progress, and track officers/assets continuously.</li>
-              <li>Integrated real-time tracking with MQTT for accurate asset visibility and efficient task execution.</li>
             </ul>
-            <p class="tagline">
-              MVVM Pattern • REST API • Retrofit2 • Chart • Google Maps • Location Services • Firebase • FCM • Service • Broadcast Receiver • Picasso • Adapter • RecyclerView • CardView • Android Studio • Kotlin • XML
-            </p>
+            <div class="techTags">
+              <span class="techTag techTag--iot">MQTT</span>
+              <span class="techTag">MVVM</span>
+              <span class="techTag">Google Maps</span>
+              <span class="techTag">Firebase</span>
+              <span class="techTag">Kotlin</span>
+              <span class="techTag">FCM</span>
+            </div>
           </article>
 
-          <article class="card reveal">
+          <article class="card card--proj reveal" data-tags="kotlin android iot firebase rest-api">
+            <div class="card__accent" style="--proj-color:#06b6d4"></div>
             <div class="card__head">
               <img class="card__logo" src="./assets/morefish.png" alt="MoreFish logo" />
-              <h3 class="h3">Pond Management System (MoreFish)</h3>
+              <div>
+                <span class="card__cat">IoT / Agriculture</span>
+                <h3 class="h3">Pond Management (MoreFish)</h3>
+              </div>
             </div>
-            <p class="muted">
-              IoT-based app to view pond status and maintain optimum fish-health conditions with real-time updates.
-            </p>
+            <p class="card__desc">IoT-based app for real-time pond status monitoring and optimum fish-health condition management.</p>
             <ul class="list">
               <li>Monitored pH, Ammonia (NH3), TDS, Hardness, Temperature, and water chlorine.</li>
             </ul>
-            <p class="tagline">
-              MVVM Pattern • REST API • Retrofit2 • Gson • Chart • FCM • Service • Broadcast Receiver • Picasso/Glide • RecyclerView • CardView • Android Studio • XML • Firebase • Shared Preference • Kotlin
-            </p>
+            <div class="techTags">
+              <span class="techTag techTag--iot">IoT</span>
+              <span class="techTag">MVVM</span>
+              <span class="techTag">Retrofit2</span>
+              <span class="techTag">Chart</span>
+              <span class="techTag">Firebase</span>
+              <span class="techTag">Kotlin</span>
+            </div>
           </article>
+
         </div>
       </section>
 
+      <!-- ── Education & Publication ── -->
       <section id="education" class="section">
         <div class="section__head reveal">
           <h2 class="h2 h2--big">Education &amp; Publication</h2>
@@ -310,17 +413,14 @@
           <article class="card reveal">
             <h3 class="h3">Publication</h3>
             <p class="muted">Information-Based Mobile Application to Tackle COVID-19</p>
-            <p class="fineprint">
-              Journal of Scientific Research and Reports, Pages 78–92 • DOI: 10.9734/jsrr/2021/v27i130351 • Published: 04 Feb 2021
-            </p>
+            <p class="fineprint">Journal of Scientific Research and Reports, Pages 78–92 · DOI: 10.9734/jsrr/2021/v27i130351 · Published: 04 Feb 2021</p>
             <div class="spacer"></div>
-            <a class="btn btn--ghost" href="https://journaljsrr.com/index.php/JSRR/article/view/1224" target="_blank" rel="noreferrer">
-              Read Publication
-            </a>
+            <a class="btn btn--ghost" href="https://journaljsrr.com/index.php/JSRR/article/view/1224" target="_blank" rel="noreferrer">Read Publication</a>
           </article>
         </div>
       </section>
 
+      <!-- ── Certifications ── -->
       <section id="certifications" class="section">
         <div class="section__head reveal">
           <h2 class="h2 h2--big">Training &amp; Certifications</h2>
@@ -329,31 +429,31 @@
         <div class="cards">
           <article class="card reveal">
             <h3 class="h3">Skills for Employment Investment Program (SEIP)</h3>
-            <p class="muted">Pencilbox Training Institute • Mar–May 2022</p>
+            <p class="muted">Pencilbox Training Institute · Mar–May 2022</p>
             <p class="fineprint">Mobile Application Development — Android (Kotlin)</p>
           </article>
           <article class="card reveal">
             <h3 class="h3">Professional English &amp; Attitude Development</h3>
-            <p class="muted">Pencilbox Training Institute • Mar 2022</p>
-          </article>
-          <article class="card reveal">
-            <h3 class="h3">Workplace Skills Development Academy</h3>
-            <p class="muted">New Zealand • Coursework</p>
+            <p class="muted">Pencilbox Training Institute · Mar 2022</p>
+            <p class="fineprint">Workplace Skills Development Academy, New Zealand</p>
           </article>
           <article class="card reveal">
             <h3 class="h3">Skill Development for Mobile Game &amp; Application</h3>
-            <p class="muted">ICT Ministry of Bangladesh • May–Nov 2018</p>
+            <p class="muted">ICT Ministry of Bangladesh · May–Nov 2018</p>
           </article>
         </div>
       </section>
+
     </main>
 
     <footer class="footer">
       <div class="container footer__inner">
         <span class="muted">© <span id="year"></span> Mamunur Rashid Mukto</span>
-        <a class="muted" href="#top">Back to top</a>
+        <a class="muted footer__top" href="#top">↑ Back to top</a>
       </div>
     </footer>
+
+    <button class="backToTop" id="backToTop" aria-label="Scroll to top" title="Back to top">↑</button>
 
     <script src="./script.js"></script>
   </body>
